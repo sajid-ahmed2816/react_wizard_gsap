@@ -25,6 +25,10 @@ body,
   height: 100%;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .navs li {
   color: var(--black);
 }
@@ -77,4 +81,12 @@ body,
 
 .hero-content a:hover .hero-btn {
   color: var(--black);
+}
+
+img {
+  will-change: transform;
+}
+
+.custom-shadow {
+  box-shadow: 0px 4px 0px var(--black);
 }
