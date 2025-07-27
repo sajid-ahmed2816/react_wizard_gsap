@@ -5,6 +5,7 @@ import Header from './layout/header';
 import './App.css';
 import Hero from './layout/main/hero';
 import Services from './layout/main/services';
+import Case from './layout/main/case';
 
 function App() {
   const masterTimeline = gsap.timeline();
@@ -20,6 +21,7 @@ function App() {
       <main className="flex flex-col gap-10">
         <Hero timeline={masterTimeline} />
         <Services timeline={masterTimeline} />
+        <Case timeline={masterTimeline} />
       </main>
     </Fragment>
   )

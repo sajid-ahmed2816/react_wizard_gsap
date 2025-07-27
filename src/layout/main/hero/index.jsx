@@ -103,7 +103,7 @@ function Hero({ timeline }) {
       <div className="container mx-auto">
         <div className='grid grid-cols-12 gap-x-12 items-center p-6'>
           <div className='col-span-6'>
-            <div className="flex flex-col gap-8 items-start hero-content">
+            <div className="flex flex-col gap-8 items-start content-container">
               <h1 className='text-6xl font-semibold' ref={headingRef}>Navigating the digital landscape for success</h1>
               <p className='text-xl' ref={paraRef}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi rem, dolor vitae itaque dolorem similique neque architecto eum maiores soluta placeat consequatur omnis explicabo.</p>
               <a href="#" className='btn-primary' ref={buttonRef}>
@@ -112,7 +112,7 @@ function Hero({ timeline }) {
             </div>
           </div>
           <div className='col-span-6 parallax-container'>
-            <img ref={imgRef} src="https://lyoko.studio/Hero.svg" alt="hero_image" className="mx-auto" />
+            <img ref={imgRef} src={Images.hero} alt="hero_image" className="mx-auto" />
           </div>
         </div>
         <div className='grid grid-cols-12 gap-x-12 items-center p-6'>
