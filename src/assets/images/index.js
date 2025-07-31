@@ -1,4 +1,5 @@
 import hero from "./hero.png";
+import about from "./about.png";
 import logo1 from "./logo1.webp";
 import logo2 from "./logo2.png";
 import logo3 from "./logo3.png";
@@ -13,6 +14,7 @@ import things from "./things.png";
 
 const Images = {
   hero,
+  about,
   logo1,
   logo2,
   logo3,
@@ -23,7 +25,7 @@ const Images = {
   service2,
   service3,
   service4,
-  things
+  things,
 };
 
 export default Images

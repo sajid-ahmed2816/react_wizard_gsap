@@ -92,3 +92,32 @@ img {
 .parallax-container-2 {
   transform: scale(1.5);
 }
+
+.custom-marker::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 4px;
+  border-radius: 16px;
+  background: var(--accent);
+}
+
+footer .navs li {
+  color: white;
+}
+
+footer .navs li::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  transition: all 0.3s ease-in-out;
+}
+
+footer .navs li:hover {
+  cursor: pointer;
+}
+
+footer .navs li:hover::after {
+  width: 100%;
+  background: var(--white);
+}
