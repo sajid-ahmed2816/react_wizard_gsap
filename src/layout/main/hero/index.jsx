@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Images from '../../../assets/images';
+import Button from '../../../components/button';
 
 function Hero({ timeline }) {
   const headingRef = useRef(null);
@@ -99,16 +100,17 @@ function Hero({ timeline }) {
   ];
 
   return (
-    <section>
+    <section id={"home"}>
       <div className="container mx-auto">
         <div className='grid grid-cols-12 gap-x-12 items-center p-6'>
           <div className='col-span-6'>
             <div className="flex flex-col gap-8 items-start content-container">
               <h1 className='text-6xl font-semibold' ref={headingRef}>Navigating the digital landscape for success</h1>
               <p className='text-xl' ref={paraRef}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi rem, dolor vitae itaque dolorem similique neque architecto eum maiores soluta placeat consequatur omnis explicabo.</p>
-              <a href="#" className='btn-primary' ref={buttonRef}>
+              {/* <a href="#" className='btn-primary' ref={buttonRef}>
                 <span className='hero-btn'>Book a consultation</span>
-              </a>
+              </a> */}
+              <Button ref={buttonRef} title={"Book a consultation"} />
             </div>
           </div>
           <div className='col-span-6 parallax-container'>
@@ -124,7 +126,7 @@ function Hero({ timeline }) {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;

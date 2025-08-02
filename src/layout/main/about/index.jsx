@@ -69,7 +69,7 @@ function About() {
   }, []);
 
   return (
-    <section ref={sectionRef}>
+    <section ref={sectionRef} id={"about-us"}>
       <div className="container mx-auto">
         <div className='grid grid-cols-12 gap-y-10 gap-x-10 items-center p-6'>
           <div className='col-span-12 grid grid-cols-12 gap-x-8 items-center'>
@@ -132,7 +132,7 @@ function About() {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
 export default About;

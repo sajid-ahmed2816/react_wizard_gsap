@@ -9,6 +9,8 @@ import Case from './layout/main/case';
 import About from './layout/main/about';
 import Pricing from './layout/main/pricing';
 import Footer from './layout/footer';
+import Quote from './layout/main/quote';
+import Blogs from './layout/main/blog';
 
 function App() {
   const masterTimeline = gsap.timeline();
@@ -27,6 +29,8 @@ function App() {
         <Services timeline={masterTimeline} />
         <Case timeline={masterTimeline} />
         <Pricing timeline={masterTimeline} />
+        <Blogs timeline={masterTimeline} />
+        <Quote timeline={masterTimeline} />
       </main>
       <Footer />
     </Fragment>

@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -6,6 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 function Pricing() {
   const cardRefs = useRef([]);
   const liRefs = useRef([]);
+  const [hover, setHover] = useState("");
 
   gsap.registerPlugin(ScrollTrigger);
 
@@ -68,7 +69,7 @@ function Pricing() {
   const points = ["No long-term contracts", "14-day satisfaction guarantee", "Custom plans available upon request"];
 
   return (
-    <section>
+    <section id={"pricing"}>
       <div className="container mx-auto flex flex-col p-6 gap-y-8">
         <div className='grid grid-cols-12 gap-x-12 items-center'>
           <div className='col-span-12'>
@@ -87,7 +88,7 @@ function Pricing() {
         <div className='grid grid-cols-12 gap-8 items-center'>
           {pricing.map((item, ind) => (
             <div key={ind} className='col-span-4' ref={(el) => cardRefs.current[ind] = el}>
-              <div className={`p-8 grid grid-cols-12 border-2 ${item.background == "dark" ? "bg-[var(--black)]" : "bg-[var(--white)]"} border-[var(--black)] rounded-3xl custom-shadow`}>
+              <div className={`p-8 grid grid-cols-12 border-2 ${item.background == "dark" ? "bg-[var(--black)]" : "bg-[var(--white)]"} border-[var(--black)] rounded-3xl custom-shadow hover:transform-[scale(1.1)] transition-all`}>
                 <div className='col-span-12 flex flex-col justify-between gap-y-7'>
                   <h2 className={`p-1 text-3xl rounded-sm bg-[var(${item.background == "light" ? "--accent" : "--white"})] text-center`}>
                     {item.name}
@@ -126,7 +127,7 @@ function Pricing() {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
 export default Pricing;

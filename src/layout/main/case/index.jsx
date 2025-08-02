@@ -3,6 +3,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Images from '../../../assets/images';
+import Button from '../../../components/button';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -70,7 +71,7 @@ function Case() {
   }, []);
 
   return (
-    <section>
+    <section id={"use-cases"}>
       <div className="container mx-auto flex flex-col gap-6 p-6">
         <div className='grid grid-cols-12 gap-x-12 items-center'>
           <div className='col-span-12'>
@@ -112,9 +113,7 @@ function Case() {
             <div className='flex flex-col gap-6 items-start content-container'>
               <h2 className='font-semibold text-2xl'>Let's make things happen</h2>
               <p>Contact us today to learn more about how our digital marketing services can help your business grow and success online</p>
-              <a href="#" className='btn-primary'>
-                <span className='hero-btn'>Get your free proposal</span>
-              </a>
+              <Button title={"Get your free proposal"} />
             </div>
           </div>
           <div className="col-span-4"></div>
@@ -124,7 +123,7 @@ function Case() {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
 export default Case;

@@ -2,7 +2,7 @@
 
 @layer components {
   .btn-primary {
-    @apply px-6 py-3 border-2 rounded-2xl text-[20px] font-medium relative;
+    @apply px-6 py-3 border-2 rounded-2xl text-[20px] font-medium relative inline-block;
   }
 }
 
@@ -16,6 +16,7 @@
   box-sizing: border-box;
   font-family: "Space Grotesk", sans-serif;
   font-optical-sizing: auto;
+  scroll-behavior: smooth;
 }
 
 html,
@@ -64,14 +65,16 @@ body {
 }
 
 .navs a:hover .btn-highlighter::before,
-.content-container a:hover .hero-btn::before {
+.content-container a:hover .btn-highlighter::before,
+form a:hover .btn-highlighter::before {
   width: 100%;
   height: 100%;
   background-color: #B8FF5B;
 }
 
 .navs a:hover,
-.content-container a:hover {
+.content-container a:hover,
+form a:hover {
   border-color: #B8FF5B;
   z-index: 2;
 }
@@ -86,6 +89,11 @@ img {
 }
 
 .custom-shadow {
+  box-shadow: 0px 4px 0px var(--black);
+}
+
+.custom-input-shadow {
+  border-radius: 16px;
   box-shadow: 0px 4px 0px var(--black);
 }
 
@@ -104,6 +112,7 @@ img {
 
 footer .navs li {
   color: white;
+  transition: all 0.3s ease-in-out;
 }
 
 footer .navs li::after {
@@ -115,9 +124,10 @@ footer .navs li::after {
 
 footer .navs li:hover {
   cursor: pointer;
+  color: var(--accent);
 }
 
 footer .navs li:hover::after {
   width: 100%;
-  background: var(--white);
+  background: var(--accent);
 }

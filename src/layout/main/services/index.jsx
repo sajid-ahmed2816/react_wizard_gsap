@@ -57,7 +57,7 @@ function Services() {
   ];
 
   return (
-    <section>
+    <section id={"services"}>
       <div className="container mx-auto flex flex-col">
         <div className='grid grid-cols-12 gap-x-12 items-center p-6'>
           <div className='col-span-12'>
@@ -97,7 +97,7 @@ function Services() {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Services
+export default Services;
