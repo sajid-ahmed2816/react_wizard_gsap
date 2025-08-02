@@ -82,8 +82,6 @@ function Pricing() {
               </div>
             </div>
           </div>
-          <div className='col-span-12'>
-          </div>
         </div>
         <div className='grid grid-cols-12 gap-8 items-center'>
           {pricing.map((item, ind) => (
@@ -104,8 +102,10 @@ function Pricing() {
                     ))}
                   </ul>
                   <p className={`${item.background == "dark" ? "text-white" : "text-black"} text-center font-bold text-2xl`}>{item.price}</p>
-                  <a href='#' className={`p-3 flex items-center justify-center gap-2 w-full ${item.background == "light" ? "bg-[var(--black)]" : "bg-[var(--accent)]"} rounded-sm text-2xl font-semibold`}>
-                    <p className={`text-lg ${item.background == "dark" ? "text-black" : "text-white"}`}>Learn More</p>
+                  <a href="#" className={`group p-3 flex items-center justify-center gap-2 w-full ${item.background === "light" ? "border border-[var(--black)] hover:bg-[var(--black)]" : "border border-[var(--accent)] hover:bg-[var(--accent)]"} rounded-sm text-2xl font-semibold bg-transparent transition-all duration-300`}>
+                    <p className={`text-lg ${item.background === "dark" ? "text-[var(--accent)] hover:text-[var(--black)] group-hover:text-[var(--black)]" : "text-[var(--black)] group-hover:text-[var(--white)]"} transition-colors duration-300`}>
+                      Learn More
+                    </p>
                   </a>
                 </div>
               </div>

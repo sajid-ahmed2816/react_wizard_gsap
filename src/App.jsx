@@ -23,7 +23,7 @@ function App() {
   return (
     <Fragment>
       <Header timeline={masterTimeline} />
-      <main className="flex flex-col gap-20">
+      <main className="flex flex-col gap-20 pb-10">
         <Hero timeline={masterTimeline} />
         <About timeline={masterTimeline} />
         <Services timeline={masterTimeline} />

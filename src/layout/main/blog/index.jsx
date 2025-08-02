@@ -3,6 +3,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Images from '../../../assets/images';
+import Button from '../../../components/button';
 
 const blogsData = [
   {
@@ -93,74 +94,31 @@ function Blogs() {
   }, []);
 
   return (
-    // <section id={"blog"} ref={sectionRef} className="overflow-hidden">
-    //   <div className="container mx-auto flex flex-col p-6 gap-y-8">
-    //     <div className='grid grid-cols-12 gap-x-12 items-center'>
-    //       <div className='col-span-12'>
-    //         <div className='grid grid-cols-12 gap-x-8 items-center'>
-    //           <div className='col-span-2'>
-    //             <h2 className='bg-[var(--accent)] text-[40px] text-center font-semibold p-1 rounded-lg'>Blogs</h2>
-    //           </div>
-    //           <div className='col-span-7'>
-    //             <p>Insights, Trends & Tips from Our Experts.<br />Stay up-to-date with the latest in digital marketing.</p>
-    //           </div>
-    //         </div>
-    //       </div>
-    //     </div>
-    //     <div className='grid grid-cols-12 gap-x-12 items-center'>
-    //       {blogsData.map((blog, ind) => (
-    //         <div className='col-span-4' key={ind}>
-    //           <div style={{ background: `url(${blog.image})`, backgroundSize: "cover", height: "450px", backgroundPosition: "center center" }}>
-    // <h3 className="mt-4 text-xl font-semibold">{blog.title}</h3>
-    //             <p className="mt-2 text-gray-600">{blog.content}</p>
-    //           </div>
-    //         </div>
-    //       ))}
-    //     </div>
-    //   </div>
-    // </section>
     <section id="blog" className="overflow-hidden bg-white">
-      {/* Heading above horizontal scroll */}
-
-      {/* Horizontal Scroll Wrapper */}
       <div ref={horizontalWrapperRef} className="overflow-hidden">
         <div className="container mx-auto p-6">
           <div className="grid grid-cols-12 gap-x-8 items-center">
             <div className="col-span-2">
-              <h2 className="bg-[var(--accent)] text-[40px] text-center font-semibold p-1 rounded-lg">
-                Blogs
-              </h2>
+              <h2 className="bg-[var(--accent)] text-[40px] text-center font-semibold p-1 rounded-lg">Blogs</h2>
             </div>
             <div className="col-span-7">
-              <p>
-                Insights, Trends & Tips from Our Experts.
-                <br />
-                Stay up-to-date with the latest in digital marketing.
-              </p>
+              <p>Insights, Trends & Tips from Our Experts.<br />Stay up-to-date with the latest in digital marketing.</p>
             </div>
           </div>
         </div>
-        <div
-          ref={horizontalRef}
-          className="container mx-auto flex gap-x-12 p-6"
-        >
+        <div ref={horizontalRef} className="container mx-auto flex gap-x-12 p-6">
           {blogsData.map((blog, ind) => (
-            <div
-              key={ind}
-              style={{ flex: "0 0 calc(100% / 3.2)" }}
-            >
-              <div
-                style={{
-                  background: `url(${blog.image}) center/cover no-repeat`,
-                  height: "420px",
-                }}
-                className="rounded-lg"
-              >
-                <h3 className="text-xl font-semibold">{blog.title}</h3>
-                <p className="mt-2 text-gray-600">{blog.content}</p>
+            <div key={ind} style={{ flex: "0 0 calc(100% / 3.2)" }}>
+              <div style={{ background: `url(${blog.image}) center/cover no-repeat`, height: "420px" }} className="rounded-lg relative p-4 flex flex-col justify-end">
+                <div className='absolute top-0 bottom-0 left-0 right-0 bg-[#14141480] rounded-lg' />
+                <h3 className="relative text-white text-2xl font-semibold">{blog.title}</h3>
+                <p className="relative mt-2 text-white">{blog.content}</p>
               </div>
             </div>
           ))}
+        </div>
+        <div className='flex justify-center'>
+          <Button title={"See More Blogs"} />
         </div>
       </div>
     </section>
